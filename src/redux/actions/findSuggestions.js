@@ -1,6 +1,6 @@
 export const type = 'findSuggestions';
 
-const findCurrentItem = (text) => {
+const findSuggestions = (text) => {
 return {
 	type,
 	payload: text,

@@ -21,7 +21,5 @@ const mapStateToProps = (state) => {
 	};
 };
 
-const wrapper = connect(mapStateToProps);
-const component = wrapper(Results);
 
-export default component;
+export default connect(mapStateToProps)(Results);
