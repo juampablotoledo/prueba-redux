@@ -1,3 +1,29 @@
+/*
+Importa React desde react.
+
+Importa los componentes AppBar, Toolbar y AccountCircle
+desde material-ui.
+
+Importa el componente Autocomplete.
+
+Importa los estilos.
+
+Declara el componente Page como una función que recibe
+propiedades de su padre IAppBar.
+
+Declara los alias: text que es una cadena, suggestions
+que es un objeto, onChangeText y onChangeSelection que
+son ambas funciones. Cada alias corresponde a un elemento
+del objeto props.
+
+Retorna los componentes necesarios para mostrar en pantalla
+la barra de búsqueda. Todas las propiedades recibidas desde
+el componente padre IAppBar son pasadas al hijo Autocomplete.
+
+Exporta por defecto la función Page.
+*/
+
+
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
