@@ -1,3 +1,13 @@
+# Nota y Derechos
+
+Esto es una copia del proyecto de Leo Medina alojado en https://github.com/programax/react-redux-items
+
+Paso a paso en video https://www.youtube.com/watch?v=OXWn4XiDUmw&list=PL33bS175Qm6dRwGuzW6AX7Ru7OpubipSw
+
+Mi aporte, además de alguna modificación pequeña en el código, es la elaboración de comentarios que
+explican línea por línea el funcionamiento de cada parte de los componentes así como del manejo del
+estado global con Redux.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
