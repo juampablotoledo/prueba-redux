@@ -1,3 +1,23 @@
+/*
+Declara el componente Autocomplete como una clase.
+
+Crea el constructor para guardar el estado del componente
+
+El estado es un objeto que tiene una única llave llamada
+isOpen con valor falso.
+
+Declara la función render.
+
+Crea varios alias para el objeto this.props.suggestions,
+las funciones this.props.onChangeText y
+this.props.onChangeSelection y la cadena text para poder
+llamarlas dentro de la clase sin escribir this.props.
+
+Crea un alias para que el elemento isOpen del objeto 
+this.state pueda ser llamado usando sólo isOpen.
+
+
+*/
 import React, { Component } from "react";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
@@ -44,12 +64,10 @@ class Autocomplete extends Component {
                         }
                     }}
                     onBlur={() => {
-                        setTimeout(() => this.setState({ isOpen: false }), 100);
+                        setTimeout(() => this.setState({ isOpen: false, }) , 200);
                     }}
                     onFocus={() => {
-                        if (text) {
-                            this.setState({ isOpen: true });
-                        }
+                        text? this.setState({ isOpen: true }):this.setState({ isOpen: false });
                     }}
                     onKeyPress={(event) => {
                         if (event.key === "Enter" && text) {
@@ -60,6 +78,7 @@ class Autocomplete extends Component {
                 {isOpen && (
                     <Paper className="container-results" square>
                         {suggestions.map((suggestion) => (
+
                             <MenuItem
                                 key={suggestion.id}
                                 component="div"
