@@ -8,6 +8,38 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '../appBar';
 import './style.css';
 
+
+/*
+Declara el componente Page como función.
+
+Crea los respectivos alias para poder llamar las propiedades
+que son pasadas desde el componente padre sin necesidad de
+escribir props antes.
+
+Declara la constante isEmpty. Es un booleano que entrega
+verdadero o falso si results.lenght es igual a cero o no
+respectivamente.
+
+Condiciona si isEmpty es verdadero, de ser así quiere
+decir que el objeto results está vacío y en consecuencia
+muestra en pantalla que no hay resultados.
+
+Si results tiene uno o más elementos entonces usando el
+método map itera a través de cada elemento de dicho objeto
+results para crear una vista para cada uno. Se usan diversos
+componentes provenientes de material-ui y se accede a la
+información contenida en el objeto usando la sintaxis
+item.llave.
+
+El componente Card posee un atributo onClick, que indica
+que al hacer click al item se va a llamar la función goTo,
+que redirigirá a /details y la llave id del item será parte
+de la URL destino.
+
+Exporta el componente Page.
+
+
+*/
 function Page(props) {
     const {
         results,

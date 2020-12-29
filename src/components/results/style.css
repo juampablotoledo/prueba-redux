@@ -19,3 +19,7 @@
 .page-message {
     text-align: center;
 }
+.link__to_root{
+	text-decoration: none;
+	color: #FFF;
+}

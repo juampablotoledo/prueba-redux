@@ -1,7 +1,7 @@
 /*
 Importa la librería react y Component desde react.
 
-Importa el componente Page encargado de la vista
+Importa el componente Page encargado de la vista.
 
 Importa la función connect desde react-redux.
 
@@ -116,10 +116,10 @@ class IAppBar extends Component {
 	onChangeSelection(text) {
 		const { findResults, match, history } = this.props;
 		this.setState({ text });
-		findResults(text);
 		if (match.path !== "/results") {
 			history.push("/results");
 		}
+		findResults(text);
 	}
 
 	render() {

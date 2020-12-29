@@ -30,6 +30,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Autocomplete from "../autocomplete";
+import {
+  Link
+} from "react-router-dom";
 import "./style.css";
 
 function Page(props) {
@@ -38,9 +41,11 @@ function Page(props) {
 	return (
 		<AppBar position="static">
 			<Toolbar className="appbar">
-				<Typography variant="h6" color="inherit">
-					Tecnologías
-				</Typography>
+				<Link to="/" className="link__to_root">
+					<Typography variant="h6" color="inherit">
+						Tecnologías
+					</Typography>
+				</Link>
 				<Autocomplete
 					text={text}
 					suggestions={suggestions}

@@ -1,5 +1,6 @@
 /*
-Importa la acción findCurrentItemType y crea el alias type.
+Importa type (la cadena) y crea el alias findCurrentItemType
+desde la acción findCurrentItem.
 
 Importa el objeto items, que es donde están guardados todos
 los datos que se mostrarán en la aplicación.
@@ -13,8 +14,7 @@ para los datos que deben ser digeridos por el reducer para
 luego cambiar el estado o no.
 
 Declara un switch que recibe el atributo type, en éste caso
-es un objeto proveniente de findCurrentItemType, que es una
-acción.
+es una cadena proveniente de findCurrentItemType, una acción.
 
 Condiciona si existe o no un payload. Si no existe, el case
 retorna null.
@@ -33,6 +33,7 @@ Exporta la función reducer para que el store pueda acceder a
 ella cuando éste reducer sea importado desde allá.
 
 */
+
 import { type as findCurrentItemType } from '../actions/findCurrentItem';
 import items from '../../data/items';
 

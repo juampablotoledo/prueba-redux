@@ -13,6 +13,12 @@ sin importar su jerarquía en el árbol del dom.
 Declara la constante Root, ésta contiene el código JSX
 que especifica los componentes básicos de la vista.
 
+El segundo componente Route tiene como atributo path una
+expresión, que quiere denotar que la última parte de la
+url será variable con nombre itemId. Dicha variable es
+pasada como propiedad al hijo de Route; al componente
+Details.
+
 Procesa y muestra finalmente el contenido de la constan-
 te Root en el DOM
 */
@@ -23,7 +29,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Results from "./components/results";
 import Details from "./components/details";
-import store from './redux/store';
+import store from "./redux/store";
 
 const Root = (
 	<Provider store={store}>

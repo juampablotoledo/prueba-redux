@@ -7,6 +7,32 @@ import AppBar from "../appBar";
 import Button from "@material-ui/core/Button";
 import "./style.css";
 
+
+/*
+Declara el componente Page como función.
+
+Crea los respectivos alias para poder llamar las propiedades
+que son pasadas desde el componente padre sin necesidad de
+escribir props antes.
+
+Retorna el código JSX de la vista.
+
+Condiciona si currentItem existe y procede a crear la vista
+con los datos obtenidos del objeto que proviene desde el
+reducer currentItem. Los valores del objeto son utilizadas
+en diversas partes de la vista usando objeto.llave para
+llamarlos.
+
+Si el objeto currentItem está vacío entonces muestra una
+rueda de carga.
+
+Crea un botón con un atributo onClick que llama a la función
+goTo procedente del componente padre a través de las
+propiedades.
+
+Exporta el componente Page.
+*/
+
 function Page(props) {
     const { goTo, currentItem } = props;
 
