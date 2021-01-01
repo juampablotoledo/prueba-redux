@@ -29,6 +29,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Results from "./components/results";
 import Details from "./components/details";
+import AppBar from "./components/appBar";
+
 import store from "./redux/store";
 
 const Root = (
@@ -36,9 +38,11 @@ const Root = (
 		<BrowserRouter>
 			<Switch>
 				<Route path="/results">
+					<AppBar />
 					<Results />
 				</Route>
 				<Route path="/details/:itemId">
+					<AppBar />
 					<Details />
 				</Route>
 				<Redirect from="/" to="/results" />

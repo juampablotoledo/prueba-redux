@@ -91,17 +91,12 @@ class Details extends Component {
         findCurrentItem(itemId);
     }
 
-
-
-    goTo(path) {
+      goTo(path) {
         this.props.history.push(path);
-        //console.log(this.props.history);
     }
 
     render() {
         const { currentItem } = this.props;
-
-        //console.log(currentItem);
         return <Page currentItem={currentItem} goTo={this.goTo} />;
     }
 }

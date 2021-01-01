@@ -36,12 +36,12 @@ import {
 import "./style.css";
 
 function Page(props) {
-	const { onClick, text, suggestions, onChangeText, onChangeSelection } = props;
+	const { onClickea, text, suggestions, onChangeText, onChangeSelection } = props;
 
 	return (
 		<AppBar position="static">
 			<Toolbar className="appbar">
-				<Link to="/" className="link__to_root" onClick={() => onClick("Hola")} >
+				<Link to="/results" className="link__to_root" onClick={() => onClickea()} >
 					<Typography variant="h6" color="inherit" >
 						Tecnologías
 					</Typography>

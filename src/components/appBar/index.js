@@ -123,8 +123,7 @@ class IAppBar extends Component {
 		findResults(text);
 	}
 
-	onClickea(esto){
-		console.log(esto);
+	onClickea(){
 		this.props.findResults("");
 	}
 
@@ -134,7 +133,7 @@ class IAppBar extends Component {
 
 		return (
 			<Page
-				onClick={this.onClickea}
+				onClickea={this.onClickea}
 				text={text}
 				suggestions={suggestions}
 				onChangeText={this.onChangeText}

@@ -45,17 +45,16 @@ como argumentos al componente Results y a connect, que a
 su vez tiene como argumentos la función mapStatetoProps.
 */
 
-import React, { Component } from 'react';
-import Page from './page';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from "react";
+import Page from "./page";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 class Results extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-        };
+        this.state = {};
 
         this.goTo = this.goTo.bind(this);
     }
@@ -65,23 +64,14 @@ class Results extends Component {
     }
 
     render() {
-        const {
-            results,
-        } = this.props;
+        const { results } = this.props;
 
-        return (
-            <Page
-                results={results}
-                goTo={this.goTo}
-            />
-        );
+        return <Page results={results} goTo={this.goTo} />;
     }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
     results: state.results,
 });
 
-export default withRouter(
-    connect(mapStateToProps)(Results)
-);
+export default withRouter(connect(mapStateToProps)(Results));
