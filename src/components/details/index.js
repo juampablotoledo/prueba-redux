@@ -91,6 +91,8 @@ class Details extends Component {
         findCurrentItem(itemId);
     }
 
+
+
     goTo(path) {
         this.props.history.push(path);
         //console.log(this.props.history);

@@ -16,8 +16,8 @@ argumento que recibe de ella proviene de la URL, que a su
 vez es determinada por el componente Results, más
 precisamente desde su hijo Page.
 */
-export const type = 'findCurrentItem';
 
+export const type = 'findCurrentItem';
 const findCurrentItem = (itemId) => (
 	{
     type,

@@ -106,6 +106,7 @@ class IAppBar extends Component {
 		};
 		this.onChangeText = this.onChangeText.bind(this);
 		this.onChangeSelection = this.onChangeSelection.bind(this);
+		this.onClickea = this.onClickea.bind(this);
 	}
 
 	onChangeText(text) {
@@ -122,12 +123,18 @@ class IAppBar extends Component {
 		findResults(text);
 	}
 
+	onClickea(esto){
+		console.log(esto);
+		this.props.findResults("");
+	}
+
 	render() {
 		const { text } = this.state;
 		const { suggestions } = this.props;
 
 		return (
 			<Page
+				onClick={this.onClickea}
 				text={text}
 				suggestions={suggestions}
 				onChangeText={this.onChangeText}

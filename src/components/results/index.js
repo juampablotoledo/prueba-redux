@@ -62,7 +62,6 @@ class Results extends Component {
 
     goTo(path) {
         this.props.history.push(path);
-        console.log(this.props.history.push(path));
     }
 
     render() {
